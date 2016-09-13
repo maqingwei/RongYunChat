@@ -72,7 +72,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
             @Override
             public void onError(RongIMClient.ErrorCode errorCode) {
-                Toast.makeText(MainActivity.this, "Connect Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, " Error  Code"+errorCode , Toast.LENGTH_SHORT).show();
             }
         });
     }
