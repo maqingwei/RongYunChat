@@ -20,7 +20,6 @@ import io.rong.imlib.model.Conversation;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    private String token = "/Zxm4CGxba6m8Hp1fLdrBU+zGXYMlrgn6xMe0eSfwmmGv3takLgYZMyNRkZpXbilnidtzohK7ze5KpD3x6ZCIA==";
     private static final String TAG = "MainActivity";
 
     private Button mRoomBtn,mConnectBtn;
@@ -88,7 +87,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                 if (RongIM.getInstance() != null) {
                     RongIM.getInstance().startConversation(this, Conversation.ConversationType.CHATROOM, "1001", "hhc");
-
 
                 }
                 break;
