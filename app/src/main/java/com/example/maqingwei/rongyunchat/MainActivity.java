@@ -48,8 +48,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mUserId = (EditText) findViewById(R.id.et_userid);
         mUserName = (EditText) findViewById(R.id.et_username);
 
-
-
         mConnectBtn.setOnClickListener(this);
 
 
@@ -57,11 +55,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     private  void connectRingCloud(final String t){
 
-        RongIM.connect(token, new RongIMClient.ConnectCallback() {
+        RongIM.connect(t, new RongIMClient.ConnectCallback() {
             @Override
             public void onTokenIncorrect() {
                 //失效的处理,需要重新获取Token
                 Toast.makeText(MainActivity.this, "Token Incrrect", Toast.LENGTH_SHORT).show();
+                getTokenById(userId,uername);
             }
 
             @Override
@@ -88,7 +87,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 //启动聊天室
 
                 if (RongIM.getInstance() != null) {
-                    RongIM.getInstance().startConversation(this, Conversation.ConversationType.CHATROOM, "9527", "标题");
+                    RongIM.getInstance().startConversation(this, Conversation.ConversationType.CHATROOM, "1001", "hhc");
 
 
                 }
@@ -100,9 +99,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                 if(userId.equals("")||uername.equals("")){
                     Toast.makeText(MainActivity.this, "UserId或者用户名不能为空", Toast.LENGTH_SHORT).show();
-                    return;
+                     return;
                 }else{
 
+                    //第一步根据UserId获取Token
                 getTokenById(uername,userId);
 
                 }
@@ -133,11 +133,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Log.i("ttt",t);
                 Gson gson = new Gson();
                 Token token = gson.fromJson(t, Token.class);
+
+                //第二步 根据Token链接融云
+
                 connectRingCloud(token.getToken());
             }
         });
     }
 
+    //加入聊天室
     private void getChatRoom(){
 
 
