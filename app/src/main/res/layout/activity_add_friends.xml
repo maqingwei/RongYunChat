@@ -20,4 +20,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp" />
+
+    <com.example.maqingwei.rongyunchat.view.XListView
+        android:id="@+id/xl_searchresult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#c0c0c0"
+        android:dividerHeight="1dp">
+
+    </com.example.maqingwei.rongyunchat.view.XListView>
+
 </LinearLayout>

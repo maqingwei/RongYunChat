@@ -169,7 +169,7 @@ public class SearchEditText extends EditText implements
         if (i == EditorInfo.IME_ACTION_SEARCH) {
             // Log.i("GGG", "onEditorAction: "+textView.getText());
 
-            if (searchListener != null) {
+            if (searchListener != null) {//设置搜索回调
                 searchListener.onSearch(textView.getText().toString());
             } else {
                 Toast.makeText(this.getContext(), "未设置Edittext搜索监听", Toast.LENGTH_SHORT).show();

@@ -28,6 +28,7 @@ public class AddFriendsActivity extends BaseActivity {
 
         ButterKnife.bind(this);
         initView();
+
     }
 
     private void initView() {
@@ -37,12 +38,15 @@ public class AddFriendsActivity extends BaseActivity {
         mRight.setText("");
 
         mSearch.setHint("用户ID/昵称/手机号");
-
         mSearch.setSearchListener(new SearchEditText.onSearchListener() {
             @Override
             public void onSearch(String text) {
                 Toast.makeText(AddFriendsActivity.this, "点击了搜索,并且搜索内容是："+text, Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void searchFriends(){
+
     }
 }
