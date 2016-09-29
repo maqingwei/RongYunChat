@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.maqingwei.rongyunchat">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".App"
@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,7 +21,7 @@
 
         <!-- 单聊窗口 -->
         <activity
-            android:name=".ConversationActivity"
+            android:name=".ui.ConversationActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
@@ -37,7 +37,7 @@
         </activity>
 
         <!-- 会话列表 -->
-        <activity android:name=".ConversationListActivity">
+        <activity android:name=".ui.ConversationListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -51,7 +51,7 @@
         </activity>
 
         <!-- 聚合会话列表 -->
-        <activity android:name=".SubConversationList">
+        <activity android:name=".ui.SubConversationList">
             <action android:name="android.intent.action.VIEW" />
 
             <category android:name="android.intent.category.DEFAULT" />
@@ -60,9 +60,10 @@
                 android:host="com.example.maqingwei.rongyunchat"
                 android:pathPrefix="/subconversationlist"
                 android:scheme="rong" />
-
-
         </activity>
+        <activity android:name=".ui.FriendActivity" />
+        <activity android:name=".ui.BaseActivity" />
+        <activity android:name=".ui.AddFriendsActivity"></activity>
     </application>
 
 </manifest>

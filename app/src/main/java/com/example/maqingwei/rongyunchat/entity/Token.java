@@ -1,4 +1,4 @@
-package com.example.maqingwei.rongyunchat;
+package com.example.maqingwei.rongyunchat.entity;
 
 /**
  * Created by maqingwei

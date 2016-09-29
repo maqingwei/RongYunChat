@@ -3,6 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+<TextView
+    android:id="@+id/layoutvideo"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:visibility="gone"
+    android:background="@color/bg_topbar"
+    android:text="This is a Piture"/>
     <fragment
         android:id="@+id/conversion"
         android:layout_width="match_parent"
