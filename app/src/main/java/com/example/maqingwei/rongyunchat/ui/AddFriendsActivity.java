@@ -139,9 +139,6 @@ public class AddFriendsActivity extends BaseActivity implements AdapterView.OnIt
         sp.edit().putString("img",friendsInfo.getPortrait()).commit();
 
         Toast.makeText(AddFriendsActivity.this, "已经添加为好友 " + friendsInfo.getId(), Toast.LENGTH_SHORT).show();
-//
-//        if (RongIM.getInstance() != null) {
-//            RongIM.getInstance().startPrivateChat(this, mSearchResult.get(i - 1).getId(), mSearchResult.get(i - 1).getUserName());
-//        }
+
     }
 }
