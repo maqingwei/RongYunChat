@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import com.example.maqingwei.rongyunchat.R;
 import com.example.maqingwei.rongyunchat.adapter.FriendsListAdapter;
@@ -18,6 +19,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.rong.imkit.RongIM;
 
 /**
  * Created by maqingwei
@@ -25,7 +27,7 @@ import butterknife.ButterKnife;
  *
  * @Description:
  */
-public class FriendsFragment extends Fragment {
+public class FriendsFragment extends Fragment implements AdapterView.OnItemClickListener{
 
     private View view;
     private List<FriendsList> mData;
@@ -48,6 +50,7 @@ public class FriendsFragment extends Fragment {
         mData = new ArrayList<FriendsList>();
         mFriendList.setPullLoadEnable(false);
         mFriendList.setPullRefreshEnable(false);
+        mFriendList.setOnItemClickListener(this);
     }
 
     @Override
@@ -63,6 +66,14 @@ public class FriendsFragment extends Fragment {
             }
             mData.add(new FriendsList("",username,img,"",userid));
             mFriendList.setAdapter(new FriendsListAdapter(getContext(),mData,R.layout.item_search_friends_result));
+        }
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+        if (RongIM.getInstance() != null) {
+            RongIM.getInstance().startPrivateChat(getContext(), mData.get(i - 1).getId(), mData.get(i - 1).getUserName());
         }
     }
 }
