@@ -12,13 +12,13 @@ import java.util.List;
  *
  * @Description:
  */
-public class MyFriendsAdapter extends FragmentPagerAdapter {
+public class MyFriendsPagerAdapter extends FragmentPagerAdapter {
 
     private String titles[] = {"好友","关注","粉丝"};
 
     private List<Fragment> mLists;
 
-    public MyFriendsAdapter(FragmentManager fm,List<Fragment> lists) {
+    public MyFriendsPagerAdapter(FragmentManager fm, List<Fragment> lists) {
         super(fm);
         this.mLists = lists;
     }

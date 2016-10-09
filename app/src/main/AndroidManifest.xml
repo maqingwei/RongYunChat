@@ -61,7 +61,7 @@
                 android:pathPrefix="/subconversationlist"
                 android:scheme="rong" />
         </activity>
-        <activity android:name=".ui.FriendActivity" />
+        <activity android:name=".ui.FriendsActivity" />
         <activity android:name=".ui.BaseActivity" />
         <activity android:name=".ui.AddFriendsActivity"></activity>
     </application>

@@ -8,4 +8,15 @@
     <string name="xlistview_footer_hint_normal">上拉加载更多</string>
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
     <string name="xlistview_footer_hint_no">已加载完全部数据</string>
+
+    <!--actionbar title -->
+    <string name="de_actionbar_myacc">"个人账号"</string>
+    <string name="de_actionbar_sub_group">"群组"</string>
+    <string name="de_actionbar_sub_private">"我的私人会话"</string>
+    <string name="de_actionbar_sub_discussion">"我的讨论组"</string>
+    <string name="de_actionbar_sub_system">"系统消息"</string>
+    <string name="de_actionbar_sub_defult">"聊天"</string>
+    <string name="de_actionbar_set_public">"公众号"</string>
+    <string name="de_actionbar_system">"系统消息"</string>
+    <string name="main_customer">意见反馈</string>
 </resources>

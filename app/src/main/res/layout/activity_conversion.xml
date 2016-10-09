@@ -11,6 +11,18 @@
     android:visibility="gone"
     android:background="@color/bg_topbar"
     android:text="This is a Piture"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_chat_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <include layout="@layout/layout_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+
     <fragment
         android:id="@+id/conversion"
         android:layout_width="match_parent"

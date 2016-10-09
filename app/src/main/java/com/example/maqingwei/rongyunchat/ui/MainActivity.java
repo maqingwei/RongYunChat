@@ -32,12 +32,14 @@ public class MainActivity extends BaseActivity implements RongIM.UserInfoProvide
     private String uername;
     private String userid;
 
+
     private  Gson gson = new Gson();
 
     @BindView(R.id.et_userid)
     EditText mUserId;
     @BindView(R.id.et_username)
     EditText mUserName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,7 +147,8 @@ public class MainActivity extends BaseActivity implements RongIM.UserInfoProvide
         }
     }
 
-    @OnClick({R.id.btn_message, R.id.btn_myfriend, R.id.btn_group, R.id.btn_mylivechat, R.id.btn_connectrong})
+    @OnClick({R.id.btn_message, R.id.btn_myfriend, R.id.btn_group,
+            R.id.btn_mylivechat, R.id.btn_connectrong,R.id.btn_singlep})
     public void click(View v) {
 
         switch (v.getId()) {
@@ -161,6 +164,11 @@ public class MainActivity extends BaseActivity implements RongIM.UserInfoProvide
                 }
 
 
+
+                break;
+            case  R.id.btn_singlep:
+
+
                 break;
             case R.id.btn_message:
                 //消息
@@ -170,7 +178,7 @@ public class MainActivity extends BaseActivity implements RongIM.UserInfoProvide
                 break;
             case R.id.btn_myfriend:
                 //我的好友
-                openActivity(FriendActivity.class);
+                openActivity(FriendsActivity.class);
 
                 break;
             case R.id.btn_group:
@@ -196,6 +204,7 @@ public class MainActivity extends BaseActivity implements RongIM.UserInfoProvide
     //根据Userid 去系统里查询用户信息 并返回给融云
     private UserInfo getUserInfoById(String userid) {
         UserInfo user = new UserInfo(userid, uername, Uri.parse(Constants.USER_IMG));
+
         return user;
     }
 }

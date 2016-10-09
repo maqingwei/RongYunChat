@@ -18,6 +18,7 @@
         android:background="@drawable/search_bg"
         android:hint="输入UserId" />
 
+
     <EditText
         android:id="@+id/et_username"
         android:layout_width="match_parent"
@@ -28,6 +29,17 @@
         android:paddingLeft="10dp"
         android:background="@drawable/search_bg"
         android:hint="输入用户名" />
+
+    <EditText
+        android:id="@+id/et_inputid"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/search_bg"
+        android:hint="输入聊天的用户id" />
 
     <Button
         android:id="@+id/btn_connectrong"
@@ -140,6 +152,32 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/my_gruopimg"
             android:text="群组" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_singlep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#ffffff"
+
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/my_gsingleimg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/talk" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/my_gsingleimg"
+            android:text="单聊" />
     </RelativeLayout>
 
 

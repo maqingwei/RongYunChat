@@ -7,7 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.widget.TextView;
 
 import com.example.maqingwei.rongyunchat.R;
-import com.example.maqingwei.rongyunchat.adapter.MyFriendsAdapter;
+import com.example.maqingwei.rongyunchat.adapter.MyFriendsPagerAdapter;
 import com.example.maqingwei.rongyunchat.fragment.FansFragment;
 import com.example.maqingwei.rongyunchat.fragment.FocusFragment;
 import com.example.maqingwei.rongyunchat.fragment.FriendsFragment;
@@ -19,10 +19,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class FriendActivity extends BaseActivity {
+public class FriendsActivity extends BaseActivity {
 
     private List<Fragment> mFragmetList;
-    private MyFriendsAdapter mAdapter;
+    private MyFriendsPagerAdapter mAdapter;
 
     @BindView(R.id.tablayout)
     TabLayout mTabLayout;
@@ -51,7 +51,7 @@ public class FriendActivity extends BaseActivity {
         mCenter.setText("我的好友");
         mRight.setText("添加好友");
 
-        mAdapter = new MyFriendsAdapter(getSupportFragmentManager(),mFragmetList);
+        mAdapter = new MyFriendsPagerAdapter(getSupportFragmentManager(),mFragmetList);
         mViewPager.setAdapter(mAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);
@@ -74,6 +74,12 @@ public class FriendActivity extends BaseActivity {
     @OnClick(R.id.right_btn)
     void addFriend(){
         openActivity(AddFriendsActivity.class);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
     }
 }
 

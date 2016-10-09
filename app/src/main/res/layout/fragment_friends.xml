@@ -10,15 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></include>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#c0c0c0" />
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="我的好友"
-    android:background="#e0c0ed"
-    android:gravity="center"/>
+    <com.example.maqingwei.rongyunchat.view.XListView
+        android:id="@+id/xl_myfriends"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#c0c0c0"
+        android:dividerHeight="1dp">
+
+    </com.example.maqingwei.rongyunchat.view.XListView>
+
 </LinearLayout>
